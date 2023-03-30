@@ -4,7 +4,7 @@ class Movie
   // Definisco gli attributi della Classe
   public string $title;
   public string $desc;
-  public string $genre;
+  public array $genres;
   public int $time_min;
 
   // Creo il Costruttore che verra' richiamato nel momento in cui verra creata un Instanza della Classe
@@ -12,6 +12,7 @@ class Movie
   function __construct($_title)
   {
     $this->title = $_title;
+    // array_push($this->genre, $_genre);
   }
 
   public function getTimeHour()

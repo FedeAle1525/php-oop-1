@@ -5,13 +5,13 @@ require_once __DIR__ . '/./Movie.php';
 // // Creo prima Instanza della Classe 'Movie'
 $film = new Movie('Minions');
 $film->desc = 'I minion sono esistiti fin dall\'alba dei tempi ed hanno un solo scopo: servire il padrone "più cattivissimo" al mondo.';
-$film->genre = 'Animazione';
+$film->genres = ['Animazione', 'Commedia'];
 $film->time_min = 170;
 
 // Creo seconda Instanza della Classe 'Movie'
 $film2 = new Movie('I Mercenari');
 $film2->desc = 'I Mercenari un piccolo gruppo internazionale di esperti mercenari statunitensi, che vivono nell\'ombra e agiscono laddove nemmeno gli agenti segreti si spingono.';
-$film2->genre = 'Azione';
+$film2->genres = ['Azione', 'Avventura'];
 $film2->time_min = 185;
 
 // var_dump($film, $film2);
@@ -48,7 +48,14 @@ $film2->time_min = 185;
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
             <span class="fw-semibold">Genere: </span>
-            <?php echo $film->genre ?>
+            <?php foreach ($film->genres as $genre) { ?>
+              <span>
+                <?php echo $genre ?>
+              </span>
+
+            <?php
+            }
+            ?>
           </li>
 
           <li class="list-group-item">
@@ -68,7 +75,14 @@ $film2->time_min = 185;
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
             <span class="fw-semibold">Genere: </span>
-            <?php echo $film2->genre ?>
+            <?php foreach ($film2->genres as $genre) { ?>
+              <span>
+                <?php echo $genre ?>
+              </span>
+
+            <?php
+            }
+            ?>
           </li>
 
           <li class="list-group-item">
