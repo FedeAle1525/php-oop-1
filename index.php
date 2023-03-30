@@ -1,3 +1,9 @@
+<?php
+// Importo la Classe "Movie"
+require_once __DIR__ . '/./Movie.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
