@@ -2,6 +2,18 @@
 // Importo la Classe "Movie"
 require_once __DIR__ . '/./Movie.php';
 
+// // Creo prima Instanza della Classe 'Movie'
+$film = new Movie('Minions');
+$film->genre = 'Animazione';
+$film->time_min = 170;
+
+// Creo seconda Instanza della Classe 'Movie'
+$film2 = new Movie('I Mercenari');
+$film2->genre = 'Azione';
+$film2->time_min = 185;
+
+var_dump($film, $film2);
+
 ?>
 
 <!DOCTYPE html>
