@@ -3,6 +3,7 @@ class Movie
 {
   // Definisco gli attributi della Classe
   public string $title;
+  public string $desc;
   public string $genre;
   public int $time_min;
 
